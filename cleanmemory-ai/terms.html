@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms of Use — CleanMemory AI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="wrap">
+    <div class="brand">CleanMemory AI</div>
+    <h1>Terms of Use</h1>
+    <p class="meta">Last updated: August 21, 2026</p>
+    <nav class="links">
+      <a href="index.html">Legal</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+    <div class="lang">
+      <a href="#en" class="active" id="btn-en">English</a>
+      <a href="#ru" id="btn-ru">Русский</a>
+    </div>
+    <article class="card" id="en">
+      <h2>Apple EULA</h2>
+      <p>CleanMemory Pro subscriptions are also governed by Apple’s Standard Licensed Application End User License Agreement.</p>
+      <p><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">View Apple’s Standard EULA</a></p>
+      <h2>Subscriptions</h2>
+      <p>CleanMemory Pro is an auto-renewable subscription that unlocks unlimited cleanup tools. Payment is charged to your Apple ID account at confirmation of purchase. The subscription renews automatically unless cancelled at least 24 hours before the end of the current period. Your account is charged for renewal within 24 hours prior to the end of the current period.</p>
+      <h2>Managing your subscription</h2>
+      <p>You can manage or cancel the subscription in your Apple ID account settings after purchase. Unused portions of a free trial, if offered, are forfeited when you purchase a subscription.</p>
+      <h2>Cleanup actions</h2>
+      <p>Deleting photos, videos or contacts is initiated by you and confirmed in iOS system dialogs. The app cannot recover files after they are deleted from your library or contacts.</p>
+      <h2>On-device processing</h2>
+      <p>Core media and contacts analysis is designed to run on your device. Results depend on the content of your library and the permissions you grant.</p>
+    </article>
+    <article class="card hidden" id="ru">
+      <h2>Лицензионное соглашение Apple</h2>
+      <p>Подписки CleanMemory Pro также регулируются стандартным лицензионным соглашением Apple для лицензированных приложений (Standard EULA).</p>
+      <p><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Открыть Standard EULA Apple</a></p>
+      <h2>Подписки</h2>
+      <p>CleanMemory Pro — автоматически продлеваемая подписка, которая открывает неограниченные инструменты очистки. Оплата списывается с Apple ID в момент подтверждения покупки. Подписка продлевается автоматически, если её не отменить минимум за 24 часа до конца текущего периода. Списание за продление происходит в течение 24 часов до окончания текущего периода.</p>
+      <h2>Управление подпиской</h2>
+      <p>После покупки подписку можно изменить или отменить в настройках аккаунта Apple ID. Неиспользованная часть бесплатного пробного периода, если он предлагается, сгорает при покупке подписки.</p>
+      <h2>Действия очистки</h2>
+      <p>Удаление фото, видео или контактов запускаете вы и подтверждаете в системных диалогах iOS. Приложение не может восстановить файлы после удаления из медиатеки или контактов.</p>
+      <h2>Обработка на устройстве</h2>
+      <p>Основной анализ медиа и контактов выполняется на вашем устройстве. Результат зависит от содержимого библиотеки и выданных разрешений.</p>
+    </article>
+  </main>
+  <script>
+    const en = document.getElementById("en");
+    const ru = document.getElementById("ru");
+    const btnEn = document.getElementById("btn-en");
+    const btnRu = document.getElementById("btn-ru");
+    function show(lang) {
+      const isRu = lang === "ru";
+      ru.classList.toggle("hidden", !isRu);
+      en.classList.toggle("hidden", isRu);
+      btnRu.classList.toggle("active", isRu);
+      btnEn.classList.toggle("active", !isRu);
+    }
+    btnEn.addEventListener("click", (e) => { e.preventDefault(); show("en"); });
+    btnRu.addEventListener("click", (e) => { e.preventDefault(); show("ru"); });
+    if (location.hash === "#ru") show("ru");
+  </script>
+</body>
+</html>

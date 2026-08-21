@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — CleanMemory AI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="wrap">
+    <div class="brand">CleanMemory AI</div>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last updated: August 21, 2026</p>
+    <nav class="links">
+      <a href="index.html">Legal</a>
+      <a href="terms.html">Terms of Use</a>
+    </nav>
+    <div class="lang">
+      <a href="#en" class="active" id="btn-en">English</a>
+      <a href="#ru" id="btn-ru">Русский</a>
+    </div>
+    <article class="card" id="en">
+      <h2>Overview</h2>
+      <p>CleanMemory AI analyzes photos, videos and contacts on your iPhone. We do not operate a backend that receives your media library or contact list.</p>
+      <h2>Photos and videos</h2>
+      <p>If you grant Photo Library access, the app scans your library on-device to find similar photos, blurry shots, screenshots, large videos and related cleanup suggestions. Files are deleted or compressed only after you confirm the action in the system Photos prompt.</p>
+      <h2>Contacts</h2>
+      <p>If you grant Contacts access, the app looks for duplicate contacts on-device and can merge them after you confirm. Contact data is not uploaded to our servers.</p>
+      <h2>Purchases</h2>
+      <p>Subscriptions are processed by Apple through StoreKit. Apple handles payment details, billing and subscription status. We do not collect or store your credit card number.</p>
+      <h2>Data we do not collect</h2>
+      <p>The app does not include third-party analytics, advertising trackers or a remote account system. Your photo library and contacts stay on your device.</p>
+      <h2>Your choices</h2>
+      <p>You can deny or revoke Photos and Contacts access in iOS Settings. You can cancel a subscription in your Apple ID subscription settings.</p>
+      <h2>Contact</h2>
+      <p>For privacy questions, contact the developer using the App Store listing support information.</p>
+    </article>
+    <article class="card hidden" id="ru">
+      <h2>Обзор</h2>
+      <p>CleanMemory AI анализирует фото, видео и контакты на вашем iPhone. У нас нет серверной части, которая принимает вашу медиатеку или список контактов.</p>
+      <h2>Фото и видео</h2>
+      <p>Если вы даёте доступ к Фото, приложение сканирует библиотеку на устройстве: похожие снимки, размытые кадры, скриншоты, большие видео и связанные подсказки для очистки. Файлы удаляются или сжимаются только после подтверждения в системном диалоге Фото.</p>
+      <h2>Контакты</h2>
+      <p>Если вы даёте доступ к Контактам, приложение ищет дубликаты на устройстве и может объединить их после вашего подтверждения. Контакты на наши серверы не загружаются.</p>
+      <h2>Покупки</h2>
+      <p>Подписки обрабатывает Apple через StoreKit. Apple отвечает за платёжные данные, биллинг и статус подписки. Мы не собираем и не храним номер вашей карты.</p>
+      <h2>Какие данные мы не собираем</h2>
+      <p>В приложении нет сторонней аналитики, рекламных трекеров и удалённой системы аккаунтов. Медиатека и контакты остаются на устройстве.</p>
+      <h2>Ваш выбор</h2>
+      <p>Доступ к Фото и Контактам можно запретить или отозвать в Настройках iOS. Подписку можно отменить в настройках подписок Apple ID.</p>
+      <h2>Контакты</h2>
+      <p>По вопросам конфиденциальности свяжитесь с разработчиком через контактную информацию в карточке приложения в App Store.</p>
+    </article>
+  </main>
+  <script>
+    const en = document.getElementById("en");
+    const ru = document.getElementById("ru");
+    const btnEn = document.getElementById("btn-en");
+    const btnRu = document.getElementById("btn-ru");
+    function show(lang) {
+      const isRu = lang === "ru";
+      ru.classList.toggle("hidden", !isRu);
+      en.classList.toggle("hidden", isRu);
+      btnRu.classList.toggle("active", isRu);
+      btnEn.classList.toggle("active", !isRu);
+    }
+    btnEn.addEventListener("click", (e) => { e.preventDefault(); show("en"); });
+    btnRu.addEventListener("click", (e) => { e.preventDefault(); show("ru"); });
+    if (location.hash === "#ru") show("ru");
+  </script>
+</body>
+</html>
